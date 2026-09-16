@@ -209,10 +209,6 @@
   .apply { background: rgba(5,3,10,0.55); }
   .footer { background: rgba(5,3,10,0.7); }
 
-  /* EXTENSION TOGGLE */
-  .ext-toggle { display: flex; max-width: 600px; margin: 0 auto 1.5rem; }
-  .ext-tab { flex: 1; font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; padding: 13px 8px; background: transparent; border: 0.5px solid #C9A96E55; color: #C9A96E; cursor: pointer; transition: background 0.3s, color 0.3s; }
-  .ext-tab.active { background: #C9A96E; color: #05030a; }
 
   /* GUIDES GRID: 5 side by side (wrap only on phones) */
   @media (max-width: 640px) { .fac-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -476,23 +472,10 @@
   </div>
 </div>
 
-<!-- SIWA / EXTENSIONS -->
+<!-- EXTENSION -->
 <div class="siwa">
-  <span class="slabel">Optional Extensions</span>
-  <div class="ext-toggle">
-    <button class="ext-tab active" type="button" onclick="extShow(0)">The Siwa Initiation</button>
-    <button class="ext-tab" type="button" onclick="extShow(1)">The Red Sea Dolphin Initiation</button>
-  </div>
-  <div class="siwa-box" id="ext0">
-    <span class="siwa-badge">Add-On Journey</span>
-    <div class="siwa-title">The Siwa Initiation</div>
-    <div class="siwa-loc">Siwa Oasis · Western Desert · Egypt</div>
-    <p class="siwa-text">Five additional days in one of the most remote and mystical places on earth. The Oracle of Siwa. Ancient salt lakes. The silence of the Sahara.</p>
-    <div class="siwa-price">€1,800</div>
-    <div class="siwa-sub">5 days · Add-on · Details coming soon</div>
-    <button class="siwa-btn">Register Interest ✦</button>
-  </div>
-  <div class="siwa-box" id="ext1" style="display:none">
+  <span class="slabel">Optional Extension</span>
+  <div class="siwa-box">
     <span class="siwa-badge">Add-On Journey</span>
     <div class="siwa-title">The Red Sea Dolphin Initiation</div>
     <div class="siwa-loc">The Red Sea · Egypt</div>
@@ -502,14 +485,6 @@
     <button class="siwa-btn">Register Interest ✦</button>
   </div>
 </div>
-<script>
-function extShow(i){
-  document.getElementById('ext0').style.display = i===0 ? 'block' : 'none';
-  document.getElementById('ext1').style.display = i===1 ? 'block' : 'none';
-  var tabs = document.querySelectorAll('.ext-tab');
-  for (var k=0; k<tabs.length; k++) tabs[k].className = 'ext-tab' + (k===i ? ' active' : '');
-}
-</script>
 
 <!-- PRICING -->
 <div class="pricing">
